@@ -4,6 +4,7 @@ System Monitor Project in the Object Oriented Programming Course of the [Udacity
 
 
 ![System Monitor](images/monitor.png)
+![](images/monitor2.png)
 
 ## Instructions
 

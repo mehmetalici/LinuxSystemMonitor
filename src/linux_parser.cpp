@@ -220,7 +220,7 @@ string LinuxParser::Ram(int pid) {
     while (std::getline(stream, line)){
       std::istringstream linestream(line);
       linestream >> first_word;
-      if (first_word == "VmSize:") {
+      if (first_word == "VmData:") {
         linestream >> mem_util;
       }
     }
@@ -278,5 +278,7 @@ long LinuxParser::UpTime(int pid) {
     for (int i = 0; i < UNTIL_UPTIME; i++) linestream >> token;
     linestream >> uptime;
   }
-  return std::stoi(uptime);
+  int upTimePid = UpTime() - stol(uptime)/sysconf(_SC_CLK_TCK);
+  return upTimePid;
+  
 }

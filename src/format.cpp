@@ -8,9 +8,9 @@ using std::string;
 // OUTPUT: HH:MM:SS
 string Format::ElapsedTime(long seconds) {
     int minutes = seconds / 60;
-    int seconds = seconds % 60;
+    seconds = seconds % 60;
     int hours = minutes / 60;
-    int minutes = minutes % 60;
+    minutes = minutes % 60;
 
     std::ostringstream stringStream;
     stringStream << hours << ":" << minutes << ":" << seconds;
